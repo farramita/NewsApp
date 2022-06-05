@@ -1,0 +1,29 @@
+1.
+sample=[int(x) for x in input().split()]
+
+sum = 0
+ 
+sum_left=[]
+for val in sample:
+    sum += val
+    sum_left.append(sum)
+     
+sum_right=[]
+for val in sample:
+    sum_right.append(sum)
+    sum -= val
+ 
+for i in range(len(sum_left)):
+    if sum_left[i] == sum_right[i]:
+        print(f"middle index is {i}.")
+    else:
+      	print(f"index not found")
+  
+
+2.
+
+string=input(("Enter a string:"))
+if(string==string[::-1]):
+      print(string + " is a palindrome")
+else:
+      print(string + "  isn’t a palindrome")
